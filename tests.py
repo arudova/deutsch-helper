@@ -16,7 +16,7 @@ class TestCheck(unittest.TestCase):
         translated_word = [entry['english'] for entry in self.data
                            if entry['deutsch'] == word]
         self.assertEqual(english_word, translated_word[0])
-        
+
     def test_deutsch_translation(self):
         word = 'daughter'
         deutsch_word = 'Tochter'

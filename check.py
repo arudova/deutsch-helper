@@ -82,5 +82,6 @@ class Check(QtGui.QWidget):
             if entry['english'] == word]
             self.der_die_das_label.setText('%s, %s, %s, %s' % cases[0])
 
-        self.translation_box.setText(translated_word[0])
+        if(len(translated_word) > 0):
+            self.translation_box.setText(translated_word[0])
 
