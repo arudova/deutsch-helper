@@ -1,13 +1,14 @@
 import sys
 from PySide import QtGui, QtCore
 
+
 class Home(QtGui.QWidget):
     windowSignal = QtCore.Signal(object)
-    
+
     def __init__(self):
         super(Home, self).__init__()
         self.initUI()
-        
+
     def initUI(self):
         prufung_button = QtGui.QPushButton('Prufung Mode')
         check_button = QtGui.QPushButton('Check Mode')
@@ -34,5 +35,3 @@ class Home(QtGui.QWidget):
 
     def showCheck(self):
         self.windowSignal.emit(2)
-
-

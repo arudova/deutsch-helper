@@ -4,8 +4,8 @@ from home import Home
 from exam import Exam
 from check import Check
 
+
 class MainScreen(QtGui.QMainWindow):
-    
     def __init__(self):
         super(MainScreen, self).__init__()
 
@@ -19,7 +19,10 @@ class MainScreen(QtGui.QMainWindow):
         self.window_height = 600
 
         self.setWindowTitle('Deutsch Helper')
-        self.setGeometry(self.window_left, self.window_top, self.window_width, self.window_height)
+        self.setGeometry(self.window_left,
+                         self.window_top,
+                         self.window_width,
+                         self.window_height)
         self.center()
         self.show()
 
@@ -55,7 +58,6 @@ class MainScreen(QtGui.QMainWindow):
         cp = QtGui.QDesktopWidget().availableGeometry().center()
         qr.moveCenter(cp)
         self.move(qr.topLeft())
-
 
     def keyPressEvent(self, event):
         if event.key() == QtCore.Qt.Key_Escape:
